@@ -1072,7 +1072,8 @@ def view_points_depth(points, view, normalize):
 def main():
     opt = Options().parse()
     nusc_version = opt.nusc_version
-    data_dir = os.path.join(opt.data_root, nusc_version)
+    # data_dir = os.path.join(opt.data_root, nusc_version)
+    data_dir = opt.data_root
     save_root = opt.save_root
     save_path = os.path.join(save_root, nusc_version)
     nusc_convertor = NuScenesConverter(data_dir=data_dir, version=nusc_version, save_path=save_path, save_version='v0.0.1')
